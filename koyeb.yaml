@@ -1,0 +1,17 @@
+# koyeb.yaml
+
+services:
+  - name: telegram-video-bot
+    type: web
+    ports:
+      - port: 8080
+        protocol: http
+    env:
+      - key: BOT_TOKEN
+        value: "8136008912:AAHwM1ZBZ2WxgCnFpRA0MC_EIr9KcRQiF3c"
+    build:
+      type: docker
+      dockerfile: Dockerfile
+    routes:
+      - src: /
+        dest: /
