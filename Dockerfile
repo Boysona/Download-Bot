@@ -21,4 +21,4 @@ COPY . .
 EXPOSE 8080
 
 # Command to start your Flask app
-CMD ["python", "bot.py"]
+CMD ["python", "main.py"]
