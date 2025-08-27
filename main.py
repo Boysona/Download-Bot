@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 # <<< NOTE: token-ka waa sida aad codsatay - ha wadaagin haddii aysan adiga kugu filnayn ama aad rabto ammaan badan >>>
 BOT_TOKEN = '8136008912:AAHwM1ZBZ2WxgCnFpRA0MC_EIr9KcRQiF3c'
-WEBHOOK_URL = 'mental-joli-zarwga-25051ae8.koyeb.app/' + '/' + BOT_TOKEN
+WEBHOOK_URL = 'https://roasted-donica-zarwga-8a730dfb.koyeb.app/' + '/' + BOT_TOKEN
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
