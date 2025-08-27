@@ -1,1 +1,13 @@
-
+Flask
+pyTelegramBotAPI
+edge-tts
+aiohttp
+python-dotenv
+requests
+gunicorn
+typing-extensions
+requests
+pyTelegramBotAPI
+Flask
+pymongo
+yt-dlp
