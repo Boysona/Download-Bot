@@ -32,7 +32,7 @@ if FFMPEG_BINARY is None:
 app = Flask(__name__)
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "8136008912:AAHwM1ZBZ2WxgCnFpRA0MC_EIr9KcRQiF3c")
-BASE_WEBHOOK_HOST = os.environ.get("WEBHOOK_HOST", "https://tts-bot-2.onrender.com")
+BASE_WEBHOOK_HOST = os.environ.get("WEBHOOK_HOST", "https://download-bot-5sv5.onrender.com")
 WEBHOOK_URL = BASE_WEBHOOK_HOST.rstrip("/") + "/" + BOT_TOKEN
 
 bot = telebot.TeleBot(BOT_TOKEN)
