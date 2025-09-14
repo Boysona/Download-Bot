@@ -18,9 +18,9 @@ from pydub import AudioSegment
 # ----------------- Configuration (read from environment) -----------------
 # It's generally better to use secrets management or more secure methods for tokens
 # than directly embedding them or relying solely on environment variables for sensitive keys.
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN") # Changed to TELEGRAM_TOKEN for clarity
-ASSEMBLYAI_KEY = os.environ.get("ASSEMBLYAI_KEY")
-GEMINI_KEY = os.environ.get("GEMINI_KEY")
+TELEGRAM_TOKEN = os.environ.get("8371007825:AAFpp_SVygKKTR6y0PlX9W4q9LBrgwLA6b8") # Changed to TELEGRAM_TOKEN for clarity
+ASSEMBLYAI_KEY = os.environ.get("a356bbda79da4fd8a77a12ad819c47e2")
+GEMINI_KEY = os.environ.get("AIzaSyDLxRqMWmjpLW0IRh85JwLdLcYMEWY0_kk")
 WEBHOOK_URL = os.environ.get("WEBHOOK_URL", "https://download-bot-5sv5.onrender.com")
 FFMPEG_BINARY = os.environ.get("FFMPEG_BINARY", "")
 GENTLE_URL = os.environ.get("GENTLE_URL", "http://127.0.0.1:8765")
