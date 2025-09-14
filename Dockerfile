@@ -1,24 +1,17 @@
-# Base image: Python slim (yar, degdeg ah)
-FROM python:3.10-slim
+# Dockerfile
+FROM python:3.11-slim
 
-# Install system dependencies (ffmpeg, curl, etc.)
-RUN apt-get update && apt-get install -y \
-    ffmpeg \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
+# install ffmpeg + build deps
+RUN apt-get update && \
+    apt-get install -y ffmpeg && \
+    rm -rf /var/lib/apt/lists/*
 
-# Set work directory
 WORKDIR /app
-
-# Copy requirements.txt and install Python deps
-COPY requirements.txt .
+COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy all project files
-COPY . .
+COPY . /app
 
-# Expose the port (Render uses 10000/8080 usually)
-EXPOSE 8080
-
-# Command to start your Flask app
-CMD ["python", "main.py"]
+# Use gunicorn for Flask webhook hosting
+ENV PORT=5000
+CMD ["python3", "main:app", "-b", "0.0.0.0:5000", "--workers", "1", "--timeout", "300"]
