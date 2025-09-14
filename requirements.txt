@@ -27,3 +27,8 @@ pydub
 SpeechRecognition
 imageio-ffmpeg
 python-telegram-bot
+moviepy
+numpy
+imageio
+
+
