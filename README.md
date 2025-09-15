@@ -1,11 +1,7 @@
- Download-Bot
- Here’s a clean README.md in English for your Telegram bot:
-
-⸻
 
 Telegram Video Downloader Bot
 
-Short Description
+
 This is a Telegram bot that allows you to download videos from multiple platforms (YouTube, Instagram, TikTok, X/Twitter, Facebook, Reddit, and more).
 It is built with yt-dlp, pyTelegramBotAPI (telebot), and Flask for webhook handling.
 
