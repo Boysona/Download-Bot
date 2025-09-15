@@ -30,5 +30,7 @@ python-telegram-bot
 moviepy
 numpy
 imageio
-
+pocketsphinx
+pymongo
+itsdangerous
 
