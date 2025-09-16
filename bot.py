@@ -383,7 +383,7 @@ def handle_media_common(message, bot_obj, bot_token):
             markup = InlineKeyboardMarkup()
             sent_msg = bot_obj.send_message(message.chat.id, truncated or "No transcription text was returned.", reply_to_message_id=message.message_id, reply_markup=markup)
             try:
-                btn = InlineKeyboardButton("Get Key Points", callback_data=f"get_key_points|{message.chat.id}|{sent_msg.message_id}")
+                btn = InlineKeyboardButton("Get Summarize", callback_data=f"get_key_points|{message.chat.id}|{sent_msg.message_id}")
                 markup.add(btn)
                 bot_obj.edit_message_reply_markup(message.chat.id, sent_msg.message_id, reply_markup=markup)
             except Exception:
@@ -1139,7 +1139,7 @@ def register_handlers(bot_obj, bot_token):
                     reply_markup=build_admin_keyboard()
                 )
                 return
-            bot_obj.send_message(message.chat.id, "I can only process voice, audio, video, or document files for transcription. Please send one of those, or use /lang to change your language settings.")
+            bot_obj.send_message(message.chat.id, "I can only process voice, audio, video, files for transcription. Please send one of those, or use /lang to change your language settings.")
         except Exception:
             logging.exception("Error in handle_text_messages")
 
@@ -1164,21 +1164,21 @@ def register_handlers(bot_obj, bot_token):
             uid_key = str(chat_id_val)
             stored = user_transcriptions.get(uid_key, {}).get(msg_id)
             if not stored:
-                bot_obj.answer_callback_query(call.id, "Key points unavailable (maybe expired).", show_alert=True)
+                bot_obj.answer_callback_query(call.id, " ⚠️ Get Summarize unavailable (maybe expired).", show_alert=True)
                 return
-            bot_obj.answer_callback_query(call.id, "Generating key points...")
-            status_msg = bot_obj.send_message(call.message.chat.id, "🔎 Generating key points, please wait...", reply_to_message_id=call.message.message_id)
-            prompt = f"a short Summarize this text iusing the same language it is written in without adding any any introductions, notes, or extra phrases.\n\n{stored}"
+            bot_obj.answer_callback_query(call.id, "Generating...")
+            status_msg = bot_obj.send_message(call.message.chat.id, "🔄 Generating summary Text, please wait...", reply_to_message_id=call.message.message_id)
+            prompt = f"Summarize this text iusing the same language it is written in without adding any introductions, notes, or extra phrases.\n\n{stored}"
             try:
                 summary = ask_deepseek_r1(prompt)
             except Exception as e:
                 logging.exception("Deepseek request failed")
-                bot_obj.edit_message_text("❌ Failed to generate key points.", chat_id=call.message.chat.id, message_id=status_msg.message_id)
+                bot_obj.edit_message_text("😓 Failed to generating.", chat_id=call.message.chat.id, message_id=status_msg.message_id)
                 return
             if not summary:
-                bot_obj.edit_message_text("No summary returned.", chat_id=call.message.chat.id, message_id=status_msg.message_id)
+                bot_obj.edit_message_text("No Summary returned.", chat_id=call.message.chat.id, message_id=status_msg.message_id)
             else:
-                bot_obj.edit_message_text(f"🔑 Key Points:\n\n{summary}", chat_id=call.message.chat.id, message_id=status_msg.message_id)
+                bot_obj.edit_message_text(f"Summary Text hera💗:\n\n{summary}", chat_id=call.message.chat.id, message_id=status_msg.message_id)
         except Exception:
             logging.exception("Error in get_key_points_callback")
 
