@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 from flask import Flask, request
 
-BOT_TOKEN = "8229893546:AAEOFMCw2q_iQu1sWKqygGNb5CiIOY8IUnY"
+BOT_TOKEN = "7770743573:AAGFMGNZa-WzsOkjYjbN3vgznQEEsR_m0Z4"
 WEBHOOK_URL_BASE = "https://download-bot-5sv5.onrender.com"
 WEBHOOK_URL_PATH = f"/{BOT_TOKEN}"
 WEBHOOK_URL = WEBHOOK_URL_BASE + WEBHOOK_URL_PATH
