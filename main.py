@@ -9,7 +9,7 @@ from urllib.parse import urlparse
 
 app = Flask(__name__)
 
-BOT_TOKEN = '8136008912:AAH2gyaMSE5jQSUxh2dXkYQVFo3f8w8Ir4M'
+BOT_TOKEN = '7770743573:AAGFMGNZa-WzsOkjYjbN3vgznQEEsR_m0Z4'
 WEBHOOK_URL = 'popular-maxy-wwmahe-bd589c7e.koyeb.app/' + '/' + BOT_TOKEN
 
 bot = telebot.TeleBot(BOT_TOKEN)
