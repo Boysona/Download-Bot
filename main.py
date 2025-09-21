@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 
 app = Flask(__name__)
 
-BOT_TOKEN = '8136008912:AAHwM1ZBZ2WxgCnFpRA0MC_EIr9KcRQiF3c'
+BOT_TOKEN = '8136008912:AAH2gyaMSE5jQSUxh2dXkYQVFo3f8w8Ir4M'
 WEBHOOK_URL = 'https://download-bot-5sv5.onrender.com' + '/' + BOT_TOKEN
 
 bot = telebot.TeleBot(BOT_TOKEN)
