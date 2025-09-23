@@ -40,7 +40,7 @@ def set_bot_info_and_startup():
         bot.set_my_description(
             "This bot transcribes voice messages, audio files, and videos into text. "
             "It can also translate and summarize results, and supports multiple languages.\n\n"
-            "• Send audio, voice, or video files up to 20MB\n"
+            "• Send audio, voice, or video files up to 1GB\n"
             "• Choose your transcription language\n"
             "• Translate or summarize instantly with buttons\n"
             "• Completely free\n\n"
@@ -56,7 +56,7 @@ def set_bot_info_and_startup():
         bot.set_my_description(
             "This bot transcribes voice messages, audio files, and videos into text. "
             "It can also translate and summarize results, and supports multiple languages.\n\n"
-            "• Send audio, voice, or video files up to 20MB\n"
+            "• Send audio, voice, or video files up to 1GB\n"
             "• Choose your transcription language\n"
             "• Translate or summarize instantly with buttons\n"
             "• Completely free\n\n"
@@ -74,7 +74,7 @@ def set_bot_info_and_startup():
         bot.set_my_description(
             "🤖 هذا البوت يحول الرسائل الصوتية والملفات الصوتية والفيديو إلى نصوص. "
             "يمكنه أيضًا الترجمة والتلخيص ويدعم لغات متعددة.\n\n"
-            "• أرسل ملفات صوتية أو فيديو حتى 20 ميغابايت\n"
+            "• أرسل ملفات صوتية أو فيديو حتى 1000 ميغابايت\n"
             "• اختر لغة النسخ\n"
             "• ترجمة أو تلخيص فوري\n"
             "• مجاني بالكامل",
@@ -89,7 +89,7 @@ def set_bot_info_and_startup():
         bot.set_my_description(
             "🤖 Este bot transcribe mensajes de voz, archivos de audio y videos a texto. "
             "También puede traducir y resumir los resultados, y admite múltiples idiomas.\n\n"
-            "• Envía audio, voz o videos de hasta 20 MB\n"
+            "• Envía audio, voz o videos de hasta 1GB\n"
             "• Elige tu idioma de transcripción\n"
             "• Traduce o resume al instante\n"
             "• Totalmente gratis",
