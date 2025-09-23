@@ -7,7 +7,7 @@ from flask import Flask, request
 # ==========================
 # CONFIG
 # ==========================
-BOT_TOKEN = "7770743573:AAGoaSzjKiC4kZeYaF5ioP5ReMC_wy4R7ygx"
+BOT_TOKEN = "7790991731:AAF4NHGm0BJCf08JTdBaUWKzwfs82_Y9Ecw"
 WEBHOOK_URL_BASE = "https://tts-bot-valv.onrender.com"
 WEBHOOK_URL_PATH = f"/{BOT_TOKEN}"
 WEBHOOK_URL = WEBHOOK_URL_BASE + WEBHOOK_URL_PATH
