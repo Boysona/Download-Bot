@@ -101,7 +101,7 @@ Fadlan, hubi in link-gu uu yahay mid dadweyne (Public).
 @bot.message_handler(func=lambda message: is_supported_url(message.text) and message.content_types == ['text'], content_types=['text'])
 def handle_link_sent(message):
     url = message.text
-    processing_msg = bot.reply_to(message, "🔍 *Waan baarayaa link-gaaga, I sug inta yar...* ⏳", parse_mode='Markdown')
+    processing_msg = bot.reply_to(message, "🔍 *Waan baarayaa link-gaaga, I sug in yar...* ⏳", parse_mode='Markdown')
     
     video_info = extract_video_info(url)
     
@@ -116,8 +116,8 @@ def handle_link_sent(message):
     uploader = video_info.get('uploader', 'Lama Yaqaan')
     
     keyboard = types.InlineKeyboardMarkup()
-    video_button = types.InlineKeyboardButton("🎥 Soo Deji Video", callback_data=f"download_video_{url}")
-    audio_button = types.InlineKeyboardButton("🎧 Soo Deji Audio/MP3", callback_data=f"download_audio_{url}")
+    video_button = types.InlineKeyboardButton("Soo Deji Video ga", callback_data=f"download_video_{url}")
+    audio_button = types.InlineKeyboardButton("Soo Deji Audio giisa", callback_data=f"download_audio_{url}")
     keyboard.add(video_button, audio_button)
     
     details_text = f"""
