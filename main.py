@@ -74,7 +74,7 @@ def create_downloads_folder():
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     welcome_text = f"""
-👋 *Welcome  @{bot.get_me().name} * 
+👋 *Welcome* 
 
 Send me a link from:
 - YouTube
