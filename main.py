@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 app = Flask(__name__)
 
 BOT_TOKEN = '8136008912:AAH2gyaMSE5jQSUxh2dXkYQVFo3f8w8Ir4M'
-WEBHOOK_URL = 'excess-roundworm-wwmahe-08dde51d.koyeb.app/' + '/' + BOT_TOKEN
+WEBHOOK_URL = 'linear-maire-wwmahe-6cb646a1.koyeb.app/' + '/' + BOT_TOKEN
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
